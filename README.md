@@ -4,7 +4,7 @@
 
 Visit our deployed WordPress Team Portfolio:
 
-**[[earthy-tan-giraffe-34.hostingersite.com](https://earthy-tan-giraffe-34.hostingersite.com/](https://earthy-tan-giraffe-34.hostingersite.com/))**
+**(https://earthy-tan-giraffe-34.hostingersite.com/)**
 
 ## 📌 Project Overview
 
