@@ -4,7 +4,7 @@
 
 A custom WordPress theme and team portfolio for **Team Uncrown**, built for our **Cloud Computing** course in the **BSIT** program. It presents who we are, how we work and the systems we have shipped, and it runs live on Hostinger.
 
-🔗 **Live site:** [earthy-tan-giraffe-34.hostingersite.com](https://earthy-tan-giraffe-34.hostingersite.com/)
+🔗 **Live site:** (https://earthy-tan-giraffe-34.hostingersite.com/)
 📁 **Repository:** [github.com/Ads091/uncrown-portfolio](https://github.com/Ads091/uncrown-portfolio)
 
 ---
