@@ -1,213 +1,195 @@
-# 👑 Uncrown — WordPress Team Portfolio
+# 👑 Uncrown Portfolio
 
-## 🌐 Live Website
+> No titles. Only the work.
 
-Visit our deployed WordPress Team Portfolio:
+A custom WordPress theme and team portfolio for **Team Uncrown**, built for our **Cloud Computing** course in the **BSIT** program. It presents who we are, how we work and the systems we have shipped, and it runs live on Hostinger.
 
-**[(https://earthy-tan-giraffe-34.hostingersite.com/)](https://earthy-tan-giraffe-34.hostingersite.com/)**
+🔗 **Live site:** [earthy-tan-giraffe-34.hostingersite.com](https://earthy-tan-giraffe-34.hostingersite.com/)
+📁 **Repository:** [github.com/Ads091/uncrown-portfolio](https://github.com/Ads091/uncrown-portfolio)
 
-## 📌 Project Overview
+---
 
-The Uncrown WordPress Team Portfolio is a team-developed website created as our **Cloud Computing** project for the **Bachelor of Science in Information Technology (BSIT)** program.
+## 📖 Contents
 
-The portfolio introduces the members of team Uncrown, their roles and skill levels, our working process, and the systems we have built. It runs on a custom WordPress theme, **Uncrown Portfolio**, designed around our black-and-gold logo. The homepage opens with a scroll-driven cinematic intro, and each project has its own landing page with live demo videos of the system on web, tablet and phone screens.
+1. [About the Project](#about-the-project)
+2. [What's on the Site](#whats-on-the-site)
+3. [Our Systems](#our-systems)
+4. [Built With](#built-with)
+5. [Folder Structure](#folder-structure)
+6. [Run It Locally](#run-it-locally)
+7. [Editing the Site](#editing-the-site)
+8. [Deployment Pipeline](#deployment-pipeline)
+9. [Progress](#progress)
+10. [The Team](#the-team)
 
-## 🎯 Project Objectives
+---
 
-- Develop a professional, responsive and accessible team portfolio website.
-- Present each member's role, profile and measured skill levels, with a team skills chart.
-- Showcase the team's systems with demo videos, key features and case-study pages.
-- Provide a private contact form that can reach the whole team or one member.
-- Link the team's social media and GitHub profiles.
-- Apply WordPress theme development: custom post types, Customizer settings and template parts.
-- Use Git and GitHub for version control and progress tracking.
-- Deploy the website to a live web hosting platform.
+## About the Project
 
-## 🗂️ Featured Projects
+Most student portfolios are a list of names and a few screenshots. We wanted ours to feel like a product launch. The site opens with a short film you control by scrolling, then introduces each member, our process and the systems we built, each one with its own page and live demo videos.
 
-| Project | Platforms | Description |
-|---|---|---|
-| **5C Electrical Business Management System** | Web · POS tablet · Delivery phone app | One system for 5C Electrical: a web dashboard for owners, a POS tablet app for the counter and a delivery app for drivers, all sharing the same sales and stock data. |
-| **eVote Campus Election System** | Admin web · Voter mobile app | A campus election system with an admin console for the election committee and a mobile app for voters, from sign-in to a locked, receipted ballot. |
-| **Barangay Bagocboc Management System (BBMS)** | Web · Mobile app | A structured, three-tier digital platform designed to modernize, unify, and secure local governance, administrative workflows, and community health services within the barangay. The BBMS mobile application provides portability and smoothened accessibility for conducting household surveys, verifying resident profiles, and submitting certificate requests. |
+The theme, **Uncrown Portfolio**, was written from scratch for this project. Its black, gold and silver look comes straight from our logo: the crown, the ring around the "U" and the gold lettering appear throughout the design.
 
-## 🛠️ Technologies Used
+**Goals**
 
-| Technology | Purpose |
+- Build a responsive, accessible portfolio that works on phones and desktops.
+- Show each member's role, profile and skill levels.
+- Present our systems the way real products are presented: with demos, features and the tools used.
+- Let visitors contact the whole team or one member without exposing anyone's email.
+- Keep the code in GitHub and deploy it to live hosting automatically.
+
+---
+
+## What's on the Site
+
+| Section | What visitors see |
 |---|---|
-| WordPress | Content management system |
-| PHP | Custom theme development, content types, contact form handling |
-| HTML5 | Website structure and content |
-| CSS3 | Black-and-gold styling, layout, animations and responsive design |
-| JavaScript | Scroll intro, animations, filters, video playback and interactive features |
-| Canvas API | Live-drawn cinematic scenes in the homepage intro |
-| HTML5 Video (MP4) | Muted, looping demo videos inside browser, tablet and phone frames |
-| Google Fonts | Instrument Sans and Outfit typefaces |
-| Git | Version control and tracking project changes |
-| GitHub | Repository hosting and team collaboration |
-| LocalWP | Local WordPress development environment |
-| Hostinger | Website hosting and deployment |
+| **Intro** | A full-screen scroll film in five scenes (gold dust, orbit rings, crown peaks, an arena floor, rising embers), drawn live in the browser. Headlines build letter by letter, and it ends on our logo, headline and social links. A **Skip intro** button jumps to the end. |
+| **Team** | A card for each member with photo, role, short bio and top skills, plus a **Team skills** chart showing the team average for each skill and every member's level. |
+| **Process** | Our four steps (Discover, Define, Build, Test & refine) on a timeline that draws itself as you scroll. |
+| **Work** | A sideways-scrolling gallery of our systems. Each card plays its demo when you hover over it. |
+| **Project pages** | A landing page per system: the name sliding across as a giant title, browser, tablet and phone mockups flying in with live demos, a section that switches between each app, then key features and tech stack. |
+| **Member pages** | Full bio, skill-level bars, skill tags and a button to message that person. |
+| **Contact** | One form that reaches the whole team or a chosen member. Messages are routed on the server, so no email address appears on the site. |
 
-## 🗃️ Repository Layout
+Everything respects the visitor's **reduce motion** setting: they get a calm, still version with no autoplay.
 
-```
-uncrown-portfolio/                      # this repository
-├── .github/workflows/
-│   └── deploy-hostinger.yml            # checks PHP, then uploads the theme to Hostinger over FTP
-├── app/public/wp-content/
-│   ├── themes/uncrown-portfolio/       # the WordPress theme (see Theme Structure)
-│   └── uploads/2026/11/                # media: member photos, project demo videos, posters, screenshots
-├── .gitignore                          # keeps WordPress core, plugins and resized image copies out of Git
-└── README.md
-```
+---
 
-The `app/public` path matches a LocalWP site, so the repository can sit directly in the LocalWP site folder.
+## Our Systems
 
-The team members and projects themselves (names, roles, descriptions, skill levels, features) are stored in the WordPress database, not in files. The media they use is in `uploads/`:
+### ⚡ 5C Electrical Business Management System
+**Web dashboard · POS tablet app · Delivery phone app**
+One system for 5C Electrical. Owners track sales goals, trends, profit and stock on the web dashboard; cashiers ring up sales on the POS tablet; drivers follow routes and capture proof of delivery on their phones. All three share the same sales and stock data.
 
-| Project | Files in `uploads/2026/11/` |
-|---|---|
-| 5C Electrical Business Management System | `5c-web-dashboard.mp4`, `5c-pos-app.mp4`, `5c-delivery-app.mp4`, posters, `5c-screen-1…4.jpg` |
-| eVote Campus Election System | `evote-web-app.mp4`, `evote-phone-app.mp4`, posters |
-| Barangay Bagocboc Management System | `bbms-web-app.mp4`, `bbms-mobile-app.mp4`, posters, `bbms-web-*.jpg`, `bbms-mobile-*.jpg` |
+### 🗳️ eVote Campus Election System
+**Admin web console · Voter mobile app**
+The election committee manages candidates, watches turnout and live results, and finalizes the election from the console. Students sign in on their phones, vote once per position and receive a locked ballot receipt.
 
-## 📂 Theme Structure
+### 🏘️ Barangay Bagocboc Management System (BBMS)
+**Web system · Mobile app**
+A structured, three-tier digital platform designed to modernize, unify, and secure local governance, administrative workflows, and community health services within the barangay. The mobile app provides portability and smoothened accessibility for conducting household surveys, verifying resident profiles, and submitting certificate requests.
 
-Inside `app/public/wp-content/themes/uncrown-portfolio/`:
+---
+
+## Built With
+
+**Site:** WordPress · PHP · HTML5 · CSS3 · JavaScript · Canvas API · HTML5 video
+**Fonts:** Instrument Sans and Outfit (Google Fonts)
+**Workflow:** Git · GitHub · GitHub Actions · LocalWP
+**Hosting:** Hostinger
+
+The animations are written in plain JavaScript with no external animation libraries, so nothing extra loads from other sites.
+
+---
+
+## Folder Structure
 
 ```
 uncrown-portfolio/
-├── style.css                    # Theme information and all site styling
-├── functions.php                # Theme setup, content types, Customizer, contact form, skills, projects, social links
-├── header.php                   # Floating header, logo and navigation (Home, Team, Process, Work)
-├── footer.php                   # Footer links, social buttons and large logo
-├── front-page.php               # Homepage: intro, team, skills chart, process, work and contact
-├── index.php                    # Blog / fallback listing
-├── page.php                     # Standard pages
-├── page-contact.php             # Contact page with the routing form
-├── single-ctp_member.php        # Team member profile with skill-level bars
-├── single-ctp_project.php       # Project landing page with demo videos and key features
-├── archive-ctp_project.php      # All projects with category filters
-├── 404.php                      # "Page not found" page
-├── readme.txt                   # Installation and usage notes
-├── template-parts/
-│   ├── story.php                # Cinematic scroll intro
-│   ├── team-skills.php          # Team skills analytics chart
-│   ├── skill-bars.php           # Skill-level bars for one member
-│   ├── project-card.php         # Project card with hover-to-play demo video
-│   └── device.php               # Browser, tablet and phone frames for demo videos
-└── assets/
-    ├── css/
-    │   └── admin.css            # Dashboard widget styling
-    ├── js/
-    │   ├── scenes.js            # Live-drawn intro scenes (gold dust, orbits, crowns, arena, embers)
-    │   ├── main.js              # Scroll engine, animations, filters, videos and interactions
-    │   └── admin-media.js       # "Choose from Media Library" picker for project videos
-    └── images/
-        ├── uncrown-logo.png     # Full UNCROWN logo (transparent background)
-        ├── uncrown-mark.png     # Crown-and-U emblem
-        └── story-poster.jpg     # Still image for visitors who turn off motion
+├── .github/
+│   └── workflows/
+│       └── deploy-hostinger.yml     # Checks PHP, then uploads the theme to Hostinger
+├── .gitignore                       # Tracks only our theme and original media
+├── README.md
+└── app/
+    └── public/
+        └── wp-content/
+            ├── themes/
+            │   └── uncrown-portfolio/
+            │       ├── style.css                 # All styling and the theme's details
+            │       ├── functions.php             # Content types, settings, contact form, skills, projects
+            │       ├── header.php / footer.php   # Navigation, social buttons, logo
+            │       ├── front-page.php            # The homepage, section by section
+            │       ├── single-ctp_member.php     # A member's profile page
+            │       ├── single-ctp_project.php    # A system's landing page
+            │       ├── archive-ctp_project.php   # All systems, with filters
+            │       ├── page-contact.php          # The contact form page
+            │       ├── page.php / index.php / 404.php
+            │       ├── readme.txt                # Install notes for WordPress
+            │       ├── teamprofile/              # One file per member: role, bio, description, skills
+            │       ├── template-parts/           # Intro, skills chart, skill bars, project cards, device frames
+            │       └── assets/
+            │           ├── js/                   # scenes.js (intro), main.js (motion), admin-media.js (video picker)
+            │           ├── css/                  # Dashboard styling
+            │           └── images/               # Logo, emblem, intro still
+            └── uploads/
+                └── 2026/11/                      # Member photos, demo videos, posters, screenshots
 ```
 
-## 🚀 Deployment
+The `app/public` path mirrors a LocalWP site, so the repository can be cloned straight into one.
 
-Every push to `main` that changes the theme runs the **Deploy theme to Hostinger** workflow. It checks the PHP files for errors, then uploads the theme folder to the live site over FTP. It needs four repository secrets (Settings → Secrets and variables → Actions):
+Members and projects live in the **WordPress database**. A copy of each member's details (role, bio, description, skills and skill levels, without emails) is kept in `teamprofile/`; download or reload it from **Team Members → Team Profiles**. Photos and videos are in `uploads/`.
 
-| Secret | Value |
-|---|---|
-| `FTP_SERVER` | FTP host from Hostinger hPanel → Files → FTP Accounts |
-| `FTP_USERNAME` | FTP username |
-| `FTP_PASSWORD` | FTP password |
-| `FTP_THEME_DIR` | `public_html/wp-content/themes/uncrown-portfolio/` |
+---
 
-## ⚙️ Theme Files and Functions
+## Run It Locally
 
-| File | Description |
-|---|---|
-| `functions.php` | Registers theme features and menus, loads CSS, JavaScript and fonts, creates the **Team Members** and **Projects** content types, adds Customizer settings (homepage text, team inbox, social links), handles the contact form, calculates team skill stats, and stores each project's demo videos, features and tech stack. |
-| `front-page.php` | Builds the homepage: the scroll intro, team statistics, member cards, Team skills chart, process timeline, project gallery and contact section. |
-| `single-ctp_project.php` | Turns each project into a landing page: a sliding title marquee, devices flying in with live demos, a pinned section that switches between apps, key features and tech stack. |
-| `style.css` | Defines the visual design: black-and-gold colour tokens, typography, layout, device frames, animations and responsive styles. |
-| `assets/js/scenes.js` | Draws the five cinematic intro scenes live in the browser using the Canvas API. |
-| `assets/js/main.js` | Runs the scroll-driven intro, reveal animations, counters, 3D card tilt, project filters, demo-video playback, the contact form and navigation. |
-| `template-parts/` | Reusable pieces: the intro, the skills chart, skill bars, project cards and device frames. |
-| `assets/images/` | Stores the team logo, emblem and the intro's still image. |
+1. Install [LocalWP](https://localwp.com/) and create a new WordPress site.
+2. Clone this repository into the site's folder, or copy `app/public/wp-content/themes/uncrown-portfolio` into the site's `themes` folder:
+   ```bash
+   git clone https://github.com/Ads091/uncrown-portfolio.git
+   ```
+3. In WP Admin, go to **Appearance → Themes** and activate **Uncrown Portfolio**.
+4. Go to **Settings → Permalinks** and click **Save Changes** once so project pages open.
+5. Add members, projects and settings (see below).
 
-## ✨ Key Features
+---
 
-- **Cinematic scroll intro:** a full-screen "film" that moves through five live-drawn scenes as you scroll, with headlines that build letter by letter and a gold particle warp between scenes, ending on the team logo, main headline and social links.
-- **Team section:** member cards with photos, roles, short bios and each member's top three skills.
-- **Team skills analytics:** a chart of the team's average level for each skill (e.g. Java, HTML, CSS, JavaScript, PHP), with a dot for every member, a hover breakdown and a table view.
-- **Member profiles:** full bio, skill-level bars, skill tags and a button to message that member.
-- **Process timeline:** Discover, Define, Build and Test & refine, drawn in as you scroll.
-- **Project landing pages:** demo videos in browser, tablet and phone frames that fly together as you scroll, a pinned section that switches between each app, key-feature cards and a "Built with" list.
-- **Project gallery:** a sideways-scrolling gallery on the homepage where each card plays its demo on hover, plus category filters.
-- **Private contact routing:** visitors can message the whole team or one member; member email addresses are never shown publicly.
-- **Social links:** Facebook, Instagram, X (Twitter) and GitHub buttons in the intro, Contact section and footer.
-- **Easy editing:** team name, headlines, intro text, contact email and social links are all set in Appearance → Customize.
-- **Accessibility:** keyboard-friendly navigation, a "Skip intro" button, a table view for the skills chart, and a calm still version for visitors who turn on "reduce motion".
+## Editing the Site
 
-## 💻 JavaScript Functionality
+No code is needed for day-to-day changes. Everything is in the WordPress dashboard:
 
-The custom JavaScript files enhance the user experience through the following features:
+- **Appearance → Customize → Uncrown Homepage:** team name, headlines, intro text, team email
+- **Appearance → Customize → Uncrown Social Links:** Facebook, Instagram, X, GitHub
+- **Team Members:** photo, role, bio, skills, skill levels (`Java: 80`, one per line), private email
+- **Team Members → Team Profiles:** download members as files for GitHub, or load the files back into the site
+- **Projects:** description, up to three demo videos (web, tablet, phone), key features, tech stack
+- **Media:** images and videos
 
-- **Scroll-Driven Intro:** Links scroll position to a camera fly-through of the intro scenes, smoothed so it feels filmed rather than scrolled.
-- **Live Canvas Scenes:** Draws gold dust, orbit rings, crown peaks, an arena floor and rising embers in real time.
-- **Letter-by-Letter Headlines:** Builds and dissolves each intro headline as the visitor scrolls.
-- **Device Fly-In and App Switcher:** Brings the browser, tablet and phone frames together on scroll and switches the pinned device as each app's description comes into view.
-- **Smart Video Playback:** Plays demo videos only while they are on screen, and on project cards only on hover.
-- **Mobile Navigation:** Opens and closes a full-screen menu on smaller screens, including closing with the Escape key.
-- **Smart Header:** Hides the header when scrolling down and shows it again when scrolling up; stays below the WordPress admin bar when logged in.
-- **Scroll Progress Indicator:** Shows how far the visitor has scrolled through the page.
-- **Active Navigation Highlighting:** Highlights the menu link for the section currently in view.
-- **Reveal Animations and Counters:** Fades sections in as they appear, counts up statistics and grows skill bars.
-- **3D Tilt and Magnetic Buttons:** Cards tilt toward the cursor and buttons gently follow it.
-- **Project Filters:** Shows only the projects in the selected category.
-- **Contact Form Recipient:** Shows the member list only when "Contact an Individual Member" is chosen.
-- **Reduced Motion Support:** Turns off animations and autoplay for visitors who prefer less motion.
+---
 
-## 📈 Development Progress
+## Deployment Pipeline
 
-- [x] Design the team logo and visual identity.
-- [x] Create the custom WordPress theme (Uncrown Portfolio).
-- [x] Build the Team Members and Projects content types.
-- [x] Develop the cinematic scroll intro and live-drawn scenes.
-- [x] Add member profiles and the Team skills analytics chart.
-- [x] Add the private contact form with member routing.
-- [x] Add Home navigation and social media links.
-- [x] Build project landing pages with demo videos in device frames.
-- [x] Prepare demo videos for 5C Electrical, eVote and BBMS.
-- [x] Test responsiveness on desktop and mobile layouts.
-- [x] Add every member's photo, bio and skill levels.
-- [x] Publish the three projects with their videos and features.
-- [x] Set up the GitHub repository structure and Hostinger deployment workflow.
-- [x] Push the repository to GitHub and add the FTP secrets.
-- [ ] Deploy the website to the hosting platform.
-- [ ] Perform final functionality testing across browsers.
-- [ ] Add the team inbox and each member's contact email.
-- [ ] Add the team's social media links (Facebook, Instagram, X, GitHub).
+```
+Push to main  →  GitHub Actions checks the PHP  →  uploads the theme to Hostinger over FTP  →  live site updated
+```
 
-## 👥 Team Members
+The workflow runs whenever theme files change on `main`, or by hand from the **Actions** tab. It reads the FTP login from repository secrets, so no password is stored in the code:
 
-| Name | Role |
-|---|---|
-| Christopher Rhey Namoc | Project Manager |
-| Laurence Dumaog | System Analyst |
-| Goven Gil Sumaria | Programmer |
-| Jonalyn Ihong | Technical Writer |
+`FTP_SERVER` · `FTP_USERNAME` · `FTP_PASSWORD` · `FTP_THEME_DIR` (`public_html/wp-content/themes/uncrown-portfolio/`)
 
-## 🔗 Repository
+---
 
-GitHub Repository:
+## Progress
 
-https://github.com/Ads091/uncrown-portfolio
+**Done**
+- [x] Logo and visual identity
+- [x] Custom theme with the scroll intro, team, process, work and contact sections
+- [x] Member profiles and the Team skills chart
+- [x] Project landing pages with demo videos for 5C, eVote and BBMS
+- [x] Private contact form with member routing
+- [x] Responsive layout tested on desktop and mobile
+- [x] Member photos, bios, skill levels and the three projects published
+- [x] GitHub repository and Hostinger deployment workflow
 
-## 🎓 Academic Project
+**Still to do**
+- [ ] Final deployment to the hosting platform
+- [ ] Final testing across browsers
+- [ ] Team inbox and each member's contact email
+- [ ] Social media links (Facebook, Instagram, X, GitHub)
 
-**Course:** Bachelor of Science in Information Technology (BSIT)
+---
 
-**Subject:** Cloud Computing
+## The Team
 
-**Project:** WordPress Team Portfolio
+| | Name | Role |
+|---|---|---|
+| 👑 | **Christopher Rhey Namoc** | Project Manager |
+| 🧭 | **Laurence Dumaog** | System Analyst |
+| 💻 | **Goven Gil Sumaria** | Programmer |
+| ✍️ | **Jonalyn Ihong** | Technical Writer |
 
-**Developed by:** Team Uncrown
+---
+
+<p align="center"><b>Team Uncrown</b> · BSIT · Cloud Computing · 2026</p>
